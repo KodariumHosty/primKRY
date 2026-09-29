@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление документа</title>
+    <link rel="stylesheet" href="style/addedNews.css">
+</head>
+<body>
+
+    <a href="adminPanel.html" class="bebeack">
+        <img src="imaginazer/iBeBack.webp" alt="Назад">
+    </a>
+
+    <form id="docForm">
+        <div class="input-group">
+            <textarea id="note" placeholder=" " required></textarea>
+            <label for="note">Заметка / Описание документа</label>
+        </div>
+
+        <!-- Прямоугольник с именем файла и крестиком -->
+        <div class="file-preview-box" id="filePreviewBox" style="display: none;">
+            <span id="fileNameText">file.pdf</span>
+            <button type="button" class="remove-img-btn" id="removeFileBtn">&times;</button>
+        </div>
+
+        <div class="file-upload-group">
+            <input type="file" id="documentFile" class="hidden-file-input">
+            <label for="documentFile" class="file-btn" id="fileBtnText">Выбрать документ</label>
+        </div>
+
+        <button type="submit" class="submit-btn">Отправить</button>
+    </form>
+
+    <!-- Модалка успеха -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <h2>Успешно!</h2>
+            <p>Документ успешно загружен на сервер.</p>
+            <a href="adminPanel.html" class="submit-btn modal-ok-btn">Хорошо</a>
+        </div>
+    </div>
+
+    <script src="js/addDocumentAdmin.js"></script>
+</body>
+</html>

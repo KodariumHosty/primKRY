@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общественный контроль по приморскому краю</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/modalApport.css">
+    <link rel="stylesheet" href="style/allDock.css">
+    <link rel="stylesheet" href="style/mobileIndex.css">
+</head>
+<body>
+    <div class="junNaviUpBar" id="glava">
+        <a href="tel:79242526339" class="oneBtn"><img src="imaginazer/phone.webp" alt=""><p>8 (924) 252 63 39</p></a>
+        <a href="mailto:ispolkom.prim.krai@gmail.com" class="oneBtn"><img src="imaginazer/mail.webp" alt=""><p>ispolkom.prim.krai@gmail.com</p></a>
+    </div>
+
+    <div class="naviBar">
+
+        <img src="imaginazer/logogo.webp" alt="">
+
+        <div class="Textus">
+            <a href="#glava">Главная</a>
+            <a href="#aboutSas">О нас</a>
+            <a href="#naprav">Направления работы</a>
+            <a href="#docs">Архив</a>
+            <a href="#contact">Контакты</a>
+        </div>
+
+    </div>
+
+    <div class="mrDown"></div>
+    <div class="infofo">
+        <a href="index.html" class="btnBack"><img src="imaginazer/iBeBack.webp" alt=""></a>
+        <h2>Новости</h2>
+    </div>
+
+    <div class="mrDown"></div>
+
+    <div class="page">
+        <div class="news"></div>
+    </div>
+
+    <script>
+        const API = "http://127.0.0.1:5000";
+
+        async function loadNews() {
+            const container = document.querySelector(".news");
+            container.innerHTML = "";
+
+            try {
+                // Запрашиваем 15 новостей (максимум)
+                const res = await fetch(`${API}/api/getNews=15`);
+                const news = await res.json();
+
+                function truncateWords(str, maxWords = 20) {
+                    if (!str) return '';
+                    const words = str.trim().split(/\s+/);
+                    if (words.length <= maxWords) return str;
+                    return words.slice(0, maxWords).join(' ') + '...';
+                }
+
+                news.forEach(item => {
+                    const card = document.createElement("div");
+                    card.classList.add("cardNews");
+
+                    const aidi = item.idi;
+                    const datete = item.date;
+                    const timeme = item.time;
+                    const heading = item.ahead;
+                    const cont = truncateWords(item.textContent);
+
+                    const storageKey = `news_${aidi}`;
+
+                    card.innerHTML = `
+                        <div class="imagin">
+                            ${item.content && item.content !== 'NN'
+                            ? `<div class="imgWrap"><img src="${item.content}" alt="Новость"></div>`
+                            : ''}
+                        </div>
+
+                        <div class="textContent">
+                            <p class="datata">${datete} • ${timeme}</p>
+                            <h2 class="Aheading">${heading}</h2>
+                            <p class="contentishe">${cont}</p>
+                        </div>
+                        <a href="mrBuilder.html?id=${encodeURIComponent(aidi)}" class="readNext" data-id="${aidi}">
+                            Читать подробнее →
+                        </a>
+                    `;
+
+                    try {
+                        sessionStorage.setItem(storageKey, JSON.stringify({
+                            idi: item.idi,
+                            date: item.date,
+                            time: item.time,
+                            ahead: item.ahead,
+                            textContent: item.textContent,
+                            content: item.content
+                        }));
+                    } catch (e) {
+                        console.warn("Не удалось сохранить новость в sessionStorage:", e);
+                    }
+
+                    container.appendChild(card);
+                });
+
+            } catch (err) {
+                document.querySelectorAll('.allNewsHeader').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('.zagolovok').forEach(el => {
+                    el.style.display = 'none';
+                });
+                document.querySelectorAll('.tuda').forEach(el => {
+                    el.style.display = 'none';
+                });
+                container.innerHTML = "";
+
+                const card = document.createElement("div");
+                card.classList.add("oops");
+
+                card.innerHTML = `
+                    <img src="imaginazer/oops.webp" alt="">
+
+                    <div class="textAndBTNContents">
+                        <h2>Похоже, сервер ушел на технический перерыв</h2>
+                        <p>Disite устраняют эту проблему! Скоро всё снова будет работать. Приносим извинения за неудобства.</p>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            }
+        }
+
+        loadNews();
+    </script>
+</body>
+</html>

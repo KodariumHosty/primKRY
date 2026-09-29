@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Вход</title>
+
+
+<link rel="stylesheet" href="style/login.css">
+<link rel="stylesheet" href="style/modals.css">
+<link rel="stylesheet" href="style/AdminMobile.css">
+<body>
+
+    <a href="index.html" class="btnBack"><img src="imaginazer/iBeBack.webp" alt="" class="sasal"></a>
+
+
+    <div id="modalOverlay" class="modal-overlay" onclick="closeModalOnOverlay(event)">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Ошибка</h2>
+            <p id="modalText">Ваш пароль неверный, попробуйте еще раз.</p>
+        </div>
+    </div>
+
+    <div class="logg">
+        <h1>Вход в панель управления</h1>
+
+
+        <div class="input-group">
+            <input type="text" id="login" placeholder=" " required>
+            <label for="login">Логин</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="password" placeholder=" " required>
+            <label for="password">Пароль</label>
+        </div>
+
+        <button onclick="send()">Войти</button>
+    </div>
+
+</body>
+</html>
+
+<script src="js/loginClient.js"></script>

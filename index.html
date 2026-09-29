@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общественный контроль по приморскому краю</title>
+    <link rel="stylesheet" href="style/home.css">
+    <link rel="stylesheet" href="style/navigation.css">
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/modalApport.css">
+    <link rel="stylesheet" href="style/modalSend.css">
+    <link rel="stylesheet" href="style/mobileIndex.css">
+</head>
+<body>
+    <div class="junNaviUpBar" id="glava">
+        <a href="tel:79242526339" class="oneBtn"><img src="imaginazer/phone.webp" alt=""><p>8 (924) 252 63 39</p></a>
+        <a href="mailto:ispolkom.prim.krai@gmail.com" class="oneBtn"><img src="imaginazer/mail.webp" alt=""><p>ispolkom.prim.krai@gmail.com</p></a>
+    </div>
+
+    <div class="navaGavno">
+        <button class="burger" id="burgerBtn" aria-label="Меню">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="naviBar">
+        <img src="imaginazer/logogo.webp" alt="Лого" class="logo">
+        <div class="Textus">
+            <a href="#glava">Главная</a>
+            <a href="#aboutSas">О нас</a>
+            <a href="#naprav">Направления работы</a>
+            <a href="#docs">Архив</a>
+            <a href="#contact">Контакты</a>
+        </div>
+    </div>
+
+    <!-- Выезжающее меню (телефон) -->
+    <div class="mobileMenu" id="mobileMenu">
+        <a href="#glava">Главная</a>
+        <a href="#aboutSas">О нас</a>
+        <a href="#naprav">Направления работы</a>
+        <a href="#docs">Архив</a>
+        <a href="#contact">Контакты</a>
+    </div>
+
+    <!-- Затемнение фона -->
+    <div class="overlay" id="overlay"></div>
+
+
+
+    <img src="" alt="" class="banner" id="bannerImg">
+
+    <div class="mrPadding"></div>
+
+    <div class="mrOtstup">
+        <div class="activingCardochka">
+            <a class="ssilkaCard" onclick="openModal()">
+                <div class="card" style="background-color: #FCEAE8;">
+                    <div class="cardAhead">
+                        <img src="imaginazer/iconDock.webp" alt="" class="icons">
+                        <h2>Подать обращение</h2>
+                        <img src="imaginazer/strela.webp" alt="" class="strela">
+                    </div>
+                    <p>Сообщить о проблеме или нарушении прав</p>
+                </div>
+            </a>
+
+            <a href="#contact" class="ssilkaCard">
+                <div class="card"style="background-color: #E0F0FD;">
+                    <div class="cardAhead">
+                        <img src="imaginazer/iconMap.webp" alt="" class="icons">
+                        <h2>Контакты</h2>
+                        <img src="imaginazer/strela.webp" alt="" class="strela">
+                    </div>
+                    <p>Адрес, телефон, электронная почта</p>
+                </div>
+            </a>
+
+            <a href="#docs" class="ssilkaCard">
+                <div class="card"style="background-color: #EDECFE;">
+                    <div class="cardAhead">
+                        <img src="imaginazer/iconFolder.webp" alt="" class="icons">
+                        <h2>Архив переписки</h2>
+                        <img src="imaginazer/strela.webp" alt="" class="strela">
+                    </div>
+                    <p>Запросы, ответы, официальные документы</p>
+                </div>
+            </a>
+
+            <a href="#naprav" class="ssilkaCard">
+                <div class="card" style="background-color: #E8F0FD;">
+                    <div class="cardAhead">
+                        <img src="imaginazer/iconHumanoid.webp" alt="" class="icons">
+                        <h2 id="golovv">Направления работы</h2>
+                        <img src="imaginazer/strela.webp" alt="" class="strela">
+                    </div>
+                    <p>Наши ключевые сферы деятельности</p>
+                </div>
+            </a>
+        </div>
+
+
+        <div class="mrPadding"></div>
+
+
+        <div class="aboutMee" id="aboutSas">
+            <div class="aboutTextLeft">
+                <h2 class="golov">О нас</h2>
+                <p>Региональная общественная организация “Общественный контроль “ по Приморскому карю - это обьединение неравнодушных граждан, которые стоят на защите интересов жителей региона.</p>
+                <div class="ourMission">
+                    <img src="imaginazer/ourMiss.webp" alt="">
+                    <p>Наша цель - сделать Приморский край более комфортным, безопасным и справедливым для каждого человека</p>
+                </div>
+
+                <a href="aboutSAS.html" class="btnSelf"><button><div class="contentBtn">Подробнее о нас →</div></button></a>
+
+            </div>
+            <div class="aboutTextRight">
+                <img src="imaginazer/aboutBanner.webp" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="aboutusPhone">
+        <img src="imaginazer/aboutPhone.webp" alt="" class="bannersou">
+        <a href="aboutSAS.html" class="selfach"><button><div class="cntnt">Подробнее о нас →</div></button></a>
+    </div>
+
+
+
+    <div class="mrOtstup">
+        <div class="mrPadding"></div>
+
+        <div class="allNewsHeader" id="docs">
+            <h2 class="golov">Важная информация</h2>
+            <a href="allNews.html" class="agas"><div class="allNews"><p>Все новости </p><img src="imaginazer/strelaBlack.webp" alt=""></div></a>
+        </div>
+    </div>
+    
+    
+    <div class="news"></div>
+    <br>
+        <a href="allNews.html" class="tuda" id="newsHidePhone"><div class="allDocs"><p>Смотреть больше </p><img src="imaginazer/strelaBlack.webp" alt=""></div></a>
+    <br>
+
+    <div class="mrOtstup">
+        <div class="mrPadding"></div>
+
+        <h2 class="golov">Последние новости и публикации</h2>
+
+        <br>
+
+        <div class="docs"></div>
+
+        <br>
+            <a href="allDock.html" class="tuda"><div class="allDocs"><p>Смотреть больше </p><img src="imaginazer/strelaBlack.webp" alt=""></div></a>
+        <br>
+    </div>
+    <div class="mrPadding"></div>
+    <div class="mrOtstup" id="naprav">
+        <h2 class="golov">Направления работы</h2>
+        <div class="radCardNaprav">
+            <div class="napravCards">
+                <img src="imaginazer/iconZKH.webp" alt="">
+                <div class="textusDedus">
+                    <h2>ЖКХ</h2>
+                    <p>Контроль качества коммунальных услуг</p>
+                </div>
+            </div>
+            <div class="napravCards">
+                <img src="imaginazer/iconEco.webp" alt="">
+                <div class="textusDedus">
+                    <h2>Благоустройство</h2>
+                    <p>Чистые и ухоженные территории</p>
+                </div>
+            </div>
+            <div class="napravCards">
+                <img src="imaginazer/iconEco2.webp" alt="">
+                <div class="textusDedus">
+                    <h2>Экология</h2>
+                    <p>Защита окружающей среды</p>
+                </div>
+            </div>
+            <div class="napravCards">
+                <img src="imaginazer/iconSafe.webp" alt="">
+                <div class="textusDedus">
+                    <h2>Защита прав граждан</h2>
+                    <p>Помощь в решении проблем</p>
+                </div>
+            </div>
+            <div class="napravCards">
+                <img src="imaginazer/iconMunicipal.webp" alt="">
+                <div class="textusDedus">
+                    <h2>Муниципальная инфраструктура</h2>
+                    <p>Дороги, транспорт, социальные объекты</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mrPadding"></div>
+
+        <div class="bannerReport">
+            <img src="imaginazer/reportBanner.webp" alt="" class="imagaBan">
+            <a onclick="openModal()" class="sendie">
+                <button>Отправить →</button>
+            </a>
+        </div>
+    </div>
+
+    <footer id="contact">
+        <div class="line1">
+            <img src="imaginazer/circleLogo.webp" alt="">
+            <div class="phoneMarga"></div>
+            <div class="gapon">
+                <p>Контакты:</p>
+                <div class="patapim"></div>
+                <a href="tel:79242526339"><p>8 (924) 252 63 39</p></a>
+                <a href="mailto:ispolkom.prim.krai@gmail.com"><p>ispolkom.prim.krai@gmail.com</p></a>
+                <p> г. Артем, ул. Фрунзе</p>
+            </div>
+            <br>
+            <div class="babaGapa">
+                <a href="#glava">Главная</a>
+                <a href="#aboutSas">О нас</a>
+                <a href="#naprav">Направления работы</a>
+                <a href="#docs">Архив</a>
+                <a href="#contact">Контакты</a>
+            </div>
+        </div>
+        <div class="policy">
+            <a href="">Политика обработки персональных данных</a>
+            <a href="">Согласие на обработку персональных данных</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+<div class="overlay" id="dididna">
+    <div class="modalSendApport">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="imagaAndHeades">
+            <img src="imaginazer/logoBG.webp" alt="" class="logoReport">
+            <h2>Подать обращение</h2>
+        </div>
+        <form class="logg">
+            <div class="grida">
+                <div class="centrir">
+                    <div class="megaFlex">
+                        <div class="input-group">
+                            <input type="text" id="login" placeholder=" " required>
+                            <label for="login">Ваше имя</label>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="login" placeholder=" " required>
+                            <label for="login">Электронная почта</label>
+                        </div>
+                    </div>
+
+                    <div class="siphonee">
+                        <div class="input-group phone-group">
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                inputmode="numeric" 
+                                autocomplete="tel" 
+                                maxlength="10" 
+                                placeholder=" "
+                                required
+                            >
+                            <span class="phone-prefix">+7</span>
+                            <label for="phone">Телефон</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="areaaaa">
+                    <div class="input-group textarea-group">
+                        <textarea 
+                            id="message" 
+                            placeholder=" " 
+                            rows="5"
+                            required
+                        ></textarea>
+                        <label for="message">Сообщение</label>
+                    </div>
+                </div>
+            </div>
+
+            <input type="file" id="fileInput" class="file-input-hidden" />
+
+            <label for="fileInput" id="uploadBtn" class="upload-btn">
+                <img src="imaginazer/screpa.webp" alt="Удалить">
+                <span>Прикрепить файл или фото</span>
+            </label>
+
+            <div id="fileSelectedContainer" class="file-selected-container hidden">
+                <div class="file-chip">
+                    <span id="fileName" class="file-name">filename.ext</span>
+                    <button type="button" id="removeFileBtn" class="file-remove-btn" title="Удалить файл">
+                        <img src="imaginazer/exitt.webp" alt="Удалить" class="file-remove-icon">
+                    </button>
+                </div>
+
+                <button type="button" id="changeFileBtn" class="change-btn">Изменить</button>
+            </div>
+            
+            <div class="marginMarg"></div>
+
+            <label class="checkbox-group">
+                <input type="checkbox" id="agree" required>
+                <span class="checkbox-box"></span>
+                <span class="checkbox-text">
+                    Нажимая кнопку «Отправить», вы подтверждаете согласие с 
+                    <a href="#" target="_blank">политикой обработки персональных данных</a>
+                </span>
+            </label>
+
+
+            <div class="btsn">
+                <button type="submit" id="submitBtn" disabled>Отправить</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Модалка успеха -->
+<div id="successOverlay" class="modal-overlay" onclick="closeSuccessOnOverlay(event)">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeSuccess()">&times;</span>
+        <h2 id="successTitle">Обращение отправлено</h2>
+        <p id="successText">Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+    </div>
+</div>
+
+
+
+<script src="js/loadNewsClient.js"></script>
+<script src="js/loadDocsClient.js"></script>
+<script src="js/sendReport.js"></script>
+<script src="js/moOrLap.js"></script>
+<script src="js/burgerMenu.js"></script>

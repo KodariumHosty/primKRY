@@ -1,0 +1,23 @@
+.naviBar{
+    box-shadow: 0px 8px 20px -6px #0000001A;
+
+}
+
+.mrDown{
+    margin-top: 10px;
+}
+
+.infofo{
+    display: flex;
+    align-items: center;
+}
+
+.infofo h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: #002551;
+}
+
+.docs{
+    padding: 40px;
+}

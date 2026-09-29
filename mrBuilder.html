@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <link rel="stylesheet" href="style/mrBuilder.css">
+
+</head>
+<body>
+    
+
+
+
+    <a onclick="history.back()" style="cursor: pointer;" class="bebeack"><img src="imaginazer/iBeBack.webp" alt=""></a>
+    <main id="newsRoot"></main>
+</body>
+</html>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    const root = document.querySelector("#newsRoot"); // твой контейнер
+    if (!id) {
+        root.innerHTML = "<p>Новость не найдена</p>";
+        return;
+    }
+
+    const raw = sessionStorage.getItem(`news_${id}`);
+    if (!raw) {
+        root.innerHTML = "<p>Данные новости недоступны. Откройте её из списка новостей.</p>";
+        return;
+    }
+
+    let news;
+    try {
+        news = JSON.parse(raw);
+    } catch (e) {
+        root.innerHTML = "<p>Ошибка чтения данных</p>";
+        return;
+    }
+
+    // Рендер
+
+    root.innerHTML = `
+        ${news.content && news.content !== 'NN'
+            ? `<div class="imgWrap"><img src="${news.content}" alt="Новость"></div>`
+            : ''}
+        <p class="datata">${news.date} • ${news.time}</p>
+        <h1 class="Aheading">${news.ahead}</h1>
+        <div class="contentishe">${news.textContent}</div>
+    `;
+});
+</script>

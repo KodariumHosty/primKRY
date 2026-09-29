@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.bebeack{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.bebeack img{
+    width: 32px;
+    height: 32px;
+}
+
+#newsRoot {
+    max-width: 800px;      /* ограничиваем ширину, чтобы не растягивалось на весь экран */
+    margin: 0 auto;        /* центрируем сам блок по горизонтали */
+    padding: 20px;
+    text-align: center;    /* центрируем текст и inline-элементы */
+}
+
+#newsRoot .imgWrap img {
+    max-width: 100%;       /* картинка не вылезет за пределы */
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 10px;       /* центрируем саму картинку */
+}
+
+.datata{
+    color: #6C6C6C;
+}
+
+.Aheading{
+    color: #002551;
+}
+
+.contentishe{
+    font-size: 16px;
+}

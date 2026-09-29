@@ -1,0 +1,48 @@
+.paddington{
+    padding: 20px;
+}
+
+.infofo{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.infofo h2{
+    font-size: 40px;
+}
+
+h3{
+    color: #002551;
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.predsedatel{
+    color: #002551;
+    font-size: 20px;
+    margin: 0;
+}
+
+h2{
+    font-size: 40px;
+    color: #002551;
+}
+
+.margancovka{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.margancovka p{
+    color: #002551;
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.margancovka img{
+    width: 30px;
+    height: 30px;
+}

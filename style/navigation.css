@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.mrOtstup{
+    padding: 25px;
+}
+
+.junNaviUpBar{
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.oneBtn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(0,37,81);
+    text-decoration: none;
+}
+
+.oneBtn p{
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.oneBtn img{
+    width: 20px;
+}
+
+.naviBar{
+    position: relative;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.naviBar img{
+    position: absolute;
+    left: 50px;
+    width: 120px;
+}
+
+
+.line1 img{
+    border-radius: 50%;
+}
+
+/* ===== Бургер (по умолчанию скрыт) ===== */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 200;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.burger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #000; /* свой цвет */
+    border-radius: 2px;
+    transition: transform .3s ease, opacity .3s ease;
+}
+
+/* Анимация бургера в крестик */
+.burger.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+.burger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* ===== Выезжающее меню ===== */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: #fff; /* свой цвет */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 90px 25px 25px;
+    box-sizing: border-box;
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    z-index: 150;
+    box-shadow: -4px 0 15px rgba(0,0,0,.1);
+}
+
+.mobileMenu.active {
+    transform: translateX(0);
+}
+
+.mobileMenu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* ===== Затемнение ===== */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    z-index: 120;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== Телефон / планшет ===== */
+@media (max-width: 768px) {
+    .Textus {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}

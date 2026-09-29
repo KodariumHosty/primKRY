@@ -1,0 +1,225 @@
+@media (max-width: 768px) {
+    .junNaviUpBar{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .junNaviUpBar a p {
+        margin: 0;             /* <-- вот тут собака зарыта */
+        padding: 0;
+        font-size: 15px;
+    }
+    .navaGavno{
+        display: block;
+    }
+
+    .burger{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+    .naviBar{
+        display: none;
+    }
+
+    .banner{
+        width: 100%;
+    }
+
+    .activingCardochka{
+        flex-direction: column;
+    }
+    .aboutMee, .agas{
+        display: none;
+    }
+    .aboutusPhone{
+        display: block
+    }
+
+    .selfach button:hover{
+        background: #002551;
+        color: white;
+    }
+
+    .aboutusPhone{
+        position: relative;
+    }
+
+    .selfach button{
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: none;
+        border: 2px solid #002551;
+        cursor: pointer;
+        border-radius: 10px;
+        background-color: white;
+        transition: all 0.2s;
+        color: #002551;
+        font-weight: 700;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .contentBtn{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .allNewsHeader h2, .allNews, .golov{
+        font-size: 30px;
+    }
+    .allNews{
+        gap: 3px;
+    }
+    .oops{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 3px;
+    }
+
+    .oppana{
+        width: 100vw;
+    }
+
+    .oops h2, .oops p{
+        text-align: center;
+    }
+
+    .oops h2{
+        font-size: 35px;
+    }
+    .cardNews{
+        width: 100vw;
+    }
+
+
+    .radCardNaprav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sendie {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+
+    }
+
+    .sendie button {
+        font-size: 15px;
+        padding: 10px 30px;
+        font-weight: 600;
+        border-radius: 8px;
+    }
+
+
+    .line1{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modalSendApport{
+        position: relative;
+        width: 90vw;
+        height: auto;
+        background: #fff;
+        padding: 10px;
+    }
+
+    .modalSendApport img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .file-remove-btn img{
+        width: 20px;
+        height: 20px;
+    }
+    #changeFileBtn{
+        font-size: 20px;
+    }
+
+
+    .aboutTextLeft{
+        width: 100%;
+    }
+
+    #newsHidePhone{
+        display: block;
+        padding: 20px;
+    }
+
+    .tuda{
+        font-size: 10px;
+    }
+
+
+    /* Родителю текстового блока даем разрешающее сжатие */
+    .flexerDoc, 
+    .cardBoxes {
+        min-width: 0; /* Обязательно! Разрешает flex-элементу уменьшаться меньше контента */
+    }
+
+    /* Сам текст с именем файла */
+    .doc-id, .zaglav {
+        width: 100%;
+        box-sizing: border-box;
+        
+        /* Перенос длинных названий без пробелов */
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .margancovka p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .mrPadding{
+        padding: 0;
+    }
+
+
+    /* Самим карточкам ставим 100% ширины */
+    .cardNews {
+        width: 100%;
+        box-sizing: border-box;
+        
+        box-shadow: 0px 4px 4px 0px #00000040;
+        border-radius: 10px;
+        padding: 16px;
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Также сбрось ограничение для селектора .news > div, если оно мешает */
+    .news > div {
+        width: 100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+    }
+
+    .megaFlex{
+        width: 100%;
+        gap: 2px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
